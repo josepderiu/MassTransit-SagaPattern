@@ -1,0 +1,17 @@
+@Orchestrator_HostAddress = http://localhost:5236
+@OrderId = f270ac20-b836-483e-858d-eb0aa568dfd8
+
+POST {{Orchestrator_HostAddress}}/orders
+Content-Type: application/json
+
+###
+
+POST {{Orchestrator_HostAddress}}/payments?orderId={{OrderId}}
+Content-Type: application/json
+
+###
+
+POST {{Orchestrator_HostAddress}}/shipments?orderid={{OrderId}}
+Content-Type: application/json
+
+###
